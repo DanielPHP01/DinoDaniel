@@ -31,10 +31,10 @@ public class Dino {
   BufferedImage deadDino;
 
   public Dino() {
-    image = new Resource().getResourceImage("Dino-stand-no-eye.png");
-    leftFootDino = new Resource().getResourceImage("Dino-left-up.png");
-    rightFootDino = new Resource().getResourceImage("Dino-right-up.png");
-    deadDino = new Resource().getResourceImage("Dino-big-eyes.png");
+    image = new Resource().getResourceImage("/images/Dino-stand-no-eye.png");
+    leftFootDino = new Resource().getResourceImage("/images/Dino-left-up.png");
+    rightFootDino = new Resource().getResourceImage("/images/Dino-right-up.png");
+    deadDino = new Resource().getResourceImage("/images/Dino-big-eyes.png");
     dinoBaseY = Ground.GROUND_Y + 5;
     dinoTopY = Ground.GROUND_Y - image.getHeight() + 5;
     dinoStartX = 100;

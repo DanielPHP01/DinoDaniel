@@ -26,7 +26,7 @@ public class Ground {
     GROUND_Y = (int)(panelHeight - 0.25 * panelHeight);
     
     try{
-      image = new Resource().getResourceImage("Ground.png");
+      image = new Resource().getResourceImage("/images/Ground.png");
     } catch(Exception e) {e.printStackTrace();}
     
     groundImageSet = new ArrayList<GroundImage>();
