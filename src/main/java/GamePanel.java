@@ -11,16 +11,16 @@ public class GamePanel extends JPanel implements KeyListener, Runnable {
   
   public static int WIDTH;
   public static int HEIGHT;
-  private Thread animator;
-  
-  private boolean running = false;
-  private boolean gameOver = false;
-  
-  Ground ground;
-  Dino dino;
-  Obstacles obstacles;
+  public Thread animator;
 
-  private int score;
+  public boolean running = false;
+  public boolean gameOver = false;
+
+  public Ground ground;
+  public Dino dino;
+  public Obstacles obstacles;
+
+  public int score;
 
   
   public GamePanel(int width, int height) {
