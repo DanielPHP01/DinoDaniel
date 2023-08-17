@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-class GamePanel extends JPanel implements KeyListener, Runnable {
+public class GamePanel extends JPanel implements KeyListener, Runnable {
   
   public static int WIDTH;
   public static int HEIGHT;
