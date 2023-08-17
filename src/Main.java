@@ -1,5 +1,46 @@
+import components.Dino;
+import components.Obstacles;
+
+import javax.swing.*;
+import java.awt.*;
+
 public class Main {
+
+        JFrame mainWindow = new JFrame("T-Rex Run");
+
+        public static int WIDTH = 800;
+        public static int HEIGHT = 500;
+
+        public void createAndShowGUI() {
+            mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            Container container = mainWindow.getContentPane();
+
+            GamePanel gamePanel = new GamePanel();
+            gamePanel.addKeyListener(gamePanel);
+            gamePanel.setFocusable(true);
+
+            container.setLayout(new BorderLayout());
+
+            container.add(gamePanel, BorderLayout.CENTER);
+
+            mainWindow.setSize(WIDTH, HEIGHT);
+            mainWindow.setResizable(false);
+            mainWindow.setVisible(true);
+
+            Dino dino = new Dino();
+            dino.setJumpFactor(15);
+
+            Obstacles obstacles = new Obstacles(300);
+            obstacles.setObstacleIntervalAndSpeed(50, 5);
+
+        }
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new UserInterface().createAndShowGUI();
+            }
+        });
     }
 }
