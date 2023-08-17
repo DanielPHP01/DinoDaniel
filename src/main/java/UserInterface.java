@@ -4,7 +4,6 @@ import components.Obstacles;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 class UserInterface {
   JFrame mainWindow = new JFrame("T-Rex Run");
@@ -17,7 +16,7 @@ class UserInterface {
 
     Container container = mainWindow.getContentPane();
 
-    GamePanel gamePanel = new GamePanel();
+    GamePanel gamePanel = new GamePanel(WIDTH,HEIGHT);
     gamePanel.addKeyListener(gamePanel);
     gamePanel.setFocusable(true);
 

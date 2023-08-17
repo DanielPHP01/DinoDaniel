@@ -1,4 +1,5 @@
 import components.Dino;
+import components.Ground;
 import components.Obstacles;
 
 import javax.swing.*;
@@ -6,7 +7,7 @@ import java.awt.*;
 
 public class Main {
 
-        JFrame mainWindow = new JFrame("T-Rex Run");
+        JFrame mainWindow = new JFrame("My game");
 
         public static int WIDTH = 800;
         public static int HEIGHT = 500;
@@ -16,7 +17,7 @@ public class Main {
 
             Container container = mainWindow.getContentPane();
 
-            GamePanel gamePanel = new GamePanel();
+            GamePanel gamePanel = new GamePanel(WIDTH,HEIGHT);
             gamePanel.addKeyListener(gamePanel);
             gamePanel.setFocusable(true);
 
@@ -29,17 +30,16 @@ public class Main {
             mainWindow.setVisible(true);
 
             Dino dino = new Dino();
-            dino.setJumpFactor(15);
+            dino.setJumpFactor(20);
+            Ground ground = new Ground(HEIGHT);
 
-            Obstacles obstacles = new Obstacles(300);
-            obstacles.setObstacleIntervalAndSpeed(50, 5);
-
+            gamePanel.setObstacleIntervalAndSpeed(200, 7);
         }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new UserInterface().createAndShowGUI();
+                new Main().createAndShowGUI();
             }
         });
     }

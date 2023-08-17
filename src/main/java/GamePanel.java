@@ -21,10 +21,11 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
   Obstacles obstacles;
 
   private int score;
+
   
-  public GamePanel() {
-    WIDTH = UserInterface.WIDTH;
-    HEIGHT = UserInterface.HEIGHT;
+  public GamePanel(int width, int height) {
+    WIDTH = width;
+    HEIGHT = height;
     
     ground = new Ground(HEIGHT);
     dino = new Dino();
@@ -108,5 +109,8 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
   
   public void keyReleased(KeyEvent e) {
     // System.out.println("keyReleased: "+e);
+  }
+  public void setObstacleIntervalAndSpeed(int obstacleInterval, int movementSpeed) {
+    obstacles.setObstacleIntervalAndSpeed(obstacleInterval, movementSpeed);
   }
 }
