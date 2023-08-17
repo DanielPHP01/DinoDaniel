@@ -1,6 +1,4 @@
-import components.Dino;
-import components.Ground;
-import components.Obstacles;
+package components;
 
 import javax.swing.*;
 import java.awt.*;

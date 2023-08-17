@@ -1,4 +1,5 @@
 import components.Dino;
+import components.GamePanel;
 import components.Ground;
 import components.Obstacles;
 
